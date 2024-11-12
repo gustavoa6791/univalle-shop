@@ -1,5 +1,6 @@
 <script lang="ts">
 import ProductList from '@/components/ProductList.vue';
+import CategoryList from '@/components/CategoryList.vue';
 import LeftMenu from '@/components/left/LeftMenu.vue';
 import Carousel from '../components/Carousel.vue';
 import Separator from '@/components/Separator.vue';
@@ -17,7 +18,8 @@ export default {
     ProductList,
     LeftMenu,
     Carousel,
-    Separator
+    Separator,
+    CategoryList
   },
   beforeRouteEnter(to) {
       updateCategoryFromRouteParams(to.params.categoryId);
@@ -43,9 +45,13 @@ export default {
     <!-- <v-col cols="12" sm="3" md="3" lg="2">
       <LeftMenu />
     </v-col> -->
-    <Separator/>
+    <Separator message="Recomendados para ti ...."/>
     <v-col cols="12" sm="9" md="9" lg="12">
       <ProductList />
+
     </v-col>
+
+    <Separator message="Categorias populares"/>
+    <CategoryList />
   </v-row>
 </template>

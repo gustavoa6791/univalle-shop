@@ -40,15 +40,36 @@ export default {
             <p class="mb-4">
                 Esta es una descripción de ejemplo.
             </p>
-            <v-chip>
-                $ {{ product.price }}
-            </v-chip>
+            <div class="d-flex justify-end w-100">
+                <v-chip class=" d-flex justify-end w-25">
+                    $ {{ product.price }}
+                </v-chip>
+            </div>
+           
         </v-card-text>
         
-        <v-card-actions>
-            <v-btn @click="onAddButtonClick" color="orange-lighten-2">
+        <v-card-actions> <!-- -->
+
+            <v-btn 
+            icon="mdi-heart"
+                size="small" 
+                rounded="xl" 
+                @click="onAddButtonClick" 
+                color="red accent-4" 
+                elevation="8"
+                variant="outlined" >
+            </v-btn>
+            <v-btn 
+                class="ml-8"
+                size="small" 
+                rounded="xl" 
+                @click="onAddButtonClick" 
+               
+                elevation="8"
+                variant="outlined" >
                 Agregar al carrito
             </v-btn>
+           
         </v-card-actions>
     </v-card>
 </template>

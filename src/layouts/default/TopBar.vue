@@ -2,66 +2,57 @@
 import { useCartStore } from '@/stores/cart';
 
 export default {
-    computed: {
-        itemsCount() {
-            const cartStore = useCartStore();
-            return cartStore.cartItemsCount;
-        }
+  computed: {
+    itemsCount() {
+      const cartStore = useCartStore();
+      return cartStore.cartItemsCount;
     }
+  }
 }
 </script>
 
 <template>
-    <v-app-bar flat>
-      <v-container class="fill-height d-flex">
-     
-          <v-img src="/logo.png" />
-  
+  <v-app-bar flat>
+    <v-container class="fill-height d-flex">
+      <RouterLink to="/" custom v-slot="{ navigate }">
+        <v-img src="/logo.png" @click="navigate" />
+      </RouterLink>
 
-        <!-- <RouterLink to="/" custom v-slot="{navigate}">
-          <v-btn :active="$route.name === 'home' || $route.name === 'category'" variant="text" @click="navigate">
-            <v-icon class="mr-0 mr-sm-2" icon="mdi-home-variant" />
-            <span class="d-none d-sm-flex">Home</span>
+      <v-spacer></v-spacer>
+      <v-text-field density="compact" variant="solo" label="Buscar Productos" append-inner-icon="mdi-magnify" single-line
+        hide-details flat></v-text-field>
+
+      <RouterLink to="/cart" custom v-slot="{ navigate }">
+        <v-badge :content="itemsCount" :model-value="itemsCount > 0" color="orange-lighten-2">
+          <v-btn :active="$route.name === 'cart'" variant="text" @click="navigate">
+            <v-icon class="mr-0 mr-sm-2" icon="mdi-cart" />
+            <span class="d-none d-sm-flex">Carrito</span>
           </v-btn>
-        </RouterLink> -->
+        </v-badge>
+      </RouterLink>
 
-        <v-spacer></v-spacer>
-    <v-text-field
-      density="compact"
-      variant="solo"
-      label="Search products"
-      append-inner-icon="mdi-magnify"
-      single-line
-      hide-details
-      flat
-    ></v-text-field>
-    <v-spacer></v-spacer>
+      <RouterLink to="/about" custom v-slot="{ navigate }">
+        <v-btn :active="$route.name === 'about'" variant="text" @click="navigate">
+          <v-icon class="mr-0 mr-sm-2" icon="mdi-login" />
+          <span class="d-none d-sm-flex">ingresar</span>
+        </v-btn>
+      </RouterLink>
+      <RouterLink to="/about" custom v-slot="{ navigate }">
+        <v-btn :active="$route.name === 'about'" variant="text" @click="navigate">
+          <v-icon class="mr-0 mr-sm-2" icon="mdi-account-plus" />
+          <span class="d-none d-sm-flex">registrarse</span>
+        </v-btn>
+      </RouterLink>
 
-        <RouterLink to="/cart" custom v-slot="{navigate}">
-          <v-badge :content="itemsCount" :model-value="itemsCount > 0" color="orange-lighten-2">
-            <v-btn :active="$route.name === 'cart'" variant="text" @click="navigate">
-              <v-icon class="mr-0 mr-sm-2" icon="mdi-cart" />
-              <span class="d-none d-sm-flex">Cart</span>
-            </v-btn>
-          </v-badge>
-        </RouterLink>
 
-       <!--  <RouterLink to="/about" custom v-slot="{navigate}">
-          <v-btn :active="$route.name === 'about'" variant="text" @click="navigate">
-            <v-icon class="mr-0 mr-sm-2" icon="mdi-information" />
-            <span class="d-none d-sm-flex">About</span>
-          </v-btn>
-        </RouterLink>
 
-        <v-spacer></v-spacer> -->
-
-        <v-responsive max-width="260">
+      <!--  <v-responsive max-width="260">
           <v-text-field
             density="compact"
             hide-details
             variant="solo"
           ></v-text-field>
-        </v-responsive>
-      </v-container>
-    </v-app-bar>
+        </v-responsive> -->
+    </v-container>
+  </v-app-bar>
 </template>

@@ -1,9 +1,52 @@
-[{
-    "id": 1,
-    "name": "Oficina",
-    "description": "Productos para tu oficina."
-}, {
-    "id": 2,
-    "name": "Computadora",
-    "description": "Accesorios para computadora."
-}]
+[
+    {
+        "id": 1,
+        "name": "Oficina",
+        "description": "Productos para tu oficina.",
+        "icon": "office-building-cog-outline"
+    },
+    {
+        "id": 2,
+        "name": "Computadora",
+        "description": "Accesorios para computadora.",
+        "icon": "desktop-classic"
+    },
+    {
+        "id": 3,
+        "name": "Smartphones",
+        "description": "Teléfonos inteligentes y sus accesorios.",
+        "icon": "cellphone-sound"
+    },
+    {
+        "id": 4,
+        "name": "Tablets y E-Readers",
+        "description": "Tablets, lectores de libros electrónicos y accesorios.",
+        "icon": "tablet-dashboard"
+    },
+    {
+        "id": 5,
+        "name": "Audio y Sonido",
+        "description": "Audífonos, bocinas y equipos de sonido.",
+        "icon": "disc-player"
+    },
+    {
+        "id": 6,
+        "name": "Televisores y Video",
+        "description": "Televisores, proyectores y reproductores multimedia.",
+        "icon":"television-classic"
+    },
+    {
+        "id": 7,
+        "name": "Consolas y Videojuegos",
+        "description": "Consolas, videojuegos y accesorios de gaming.",
+        "icon": "youtube-gaming"
+    },
+ 
+    {
+        "id": 11,
+        "name": "Drones y Fotografía",
+        "description": "Drones, cámaras y accesorios para fotografía.",
+        "icon": "quadcopter"
+    }
+]
+
