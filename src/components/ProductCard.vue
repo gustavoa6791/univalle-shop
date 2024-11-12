@@ -18,7 +18,7 @@ export default {
     },
     computed: {
         productImageUrl() {
-            return this.product.image 
+            return this.product.image
                 ?? 'https://cdn.vuetifyjs.com/images/cards/sunshine.jpg';
         }
     }
@@ -27,49 +27,37 @@ export default {
 
 <template>
     <v-card>
-        <v-img
-            :src="productImageUrl"
-            height="200px"
-            cover />
+        <v-img :src="productImageUrl" height="200px" cover />
 
         <v-card-title>
-            {{  product.name }}
+            {{ product.name }}
         </v-card-title>
 
         <v-card-text>
             <p class="mb-4">
                 Esta es una descripción de ejemplo.
             </p>
-            <div class="d-flex justify-end w-100">
-                <v-chip class=" d-flex justify-end w-25">
+            <div class="d-flex justify-end">
+                <v-chip >
                     $ {{ product.price }}
                 </v-chip>
             </div>
-           
+
         </v-card-text>
-        
-        <v-card-actions> <!-- -->
+
+        <v-card-actions class="d-flex justify-space-around">
 
             <v-btn 
-            icon="mdi-heart"
-                size="small" 
-                rounded="xl" 
-                @click="onAddButtonClick" 
-                color="red accent-4" 
-                elevation="8"
-                variant="outlined" >
+                icon="mdi-heart" size="small" rounded="xl" 
+                @click="onAddButtonClick" color="red accent-4"
+                elevation="8" variant="outlined">
             </v-btn>
             <v-btn 
-                class="ml-8"
-                size="small" 
-                rounded="xl" 
-                @click="onAddButtonClick" 
-               
-                elevation="8"
-                variant="outlined" >
+                size="small" rounded="xl" @click="onAddButtonClick" 
+                elevation="8" variant="outlined">
                 Agregar al carrito
             </v-btn>
-           
+
         </v-card-actions>
     </v-card>
 </template>

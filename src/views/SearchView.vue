@@ -1,8 +1,6 @@
 <script lang="ts">
+import LeftMenu from '@/components/left/LeftMenu.vue';
 import ProductList from '@/components/ProductList.vue';
-import CategoryList from '@/components/CategoryList.vue';
-import Carousel from '../components/Carousel.vue';
-import Separator from '@/components/Separator.vue';
 import { useCategoriesStore } from '@/stores/categories';
 import { useProductsStore } from '@/stores/products';
 
@@ -13,11 +11,9 @@ function updateCategoryFromRouteParams(categoryIdParam: string|string[]) {
 }
 
 export default {
-  components: {
+    components: {
+    LeftMenu,
     ProductList,
-    Carousel,
-    Separator,
-    CategoryList
   },
   beforeRouteEnter(to) {
       updateCategoryFromRouteParams(to.params.categoryId);
@@ -30,20 +26,14 @@ export default {
     productsStore.fetchProducts();
 
     const categoriesStore = useCategoriesStore();
-    categoriesStore.fetchCategories();
   }
-}  
+    
+}
 </script>
 
 <template>
-  <Carousel/>
-  <v-row>
-    <!-- -->
-    <Separator message="Recomendados para ti ...."/>
-    <v-col cols="12" sm="9" md="9" lg="12">
-      <ProductList />
-    </v-col>
-    <Separator message="Categorias populares"/>
-    <CategoryList />
-  </v-row>
+    <VRow>
+        <VCol cols="12" sm="3" md="3" lg="2"><LeftMenu /></VCol>
+        <VCol>  <ProductList /> </VCol>
+    </VRow> 
 </template>

@@ -9,7 +9,7 @@ export default {
     methods: {
         clearCategory() {
             this.$router.push({
-                name: 'home'
+                name: 'search'
             });
         },
         goToCategory(categoryId: number) {

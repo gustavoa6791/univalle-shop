@@ -11,7 +11,7 @@ const router = createRouter({
     {
       path: '/categories/:categoryId',
       name: 'category',
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/SearchView.vue')
     },
     {
       path: '/cart',
@@ -22,6 +22,21 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: () => import('../views/SearchView.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/RegisterView.vue')
     }
   ]
 })
