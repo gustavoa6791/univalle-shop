@@ -35,7 +35,7 @@ export default {
 
         <v-card-text>
             <p class="mb-4">
-                Esta es una descripción de ejemplo.
+                {{product.description}}
             </p>
             <div class="d-flex justify-end">
                 <v-chip >
@@ -49,7 +49,7 @@ export default {
 
             <v-btn 
                 icon="mdi-heart" size="small" rounded="xl" 
-                @click="onAddButtonClick" color="red accent-4"
+               color="red accent-4"
                 elevation="8" variant="outlined">
             </v-btn>
             <v-btn 

@@ -31,9 +31,17 @@ export default {
 
     const categoriesStore = useCategoriesStore();
     categoriesStore.fetchCategories();
-  }
+  },
+
+  computed: {
+    id() {
+      return this.$route.query.user ?? null; 
+    },
+  },
 }  
 </script>
+
+
 
 <template>
   <Carousel/>

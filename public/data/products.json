@@ -3,35 +3,41 @@
     "price": 56, 
     "id": 1, 
     "image": "/products/silla.webp",
-    "categoryId": 1
+    "categoryId": 1,
+    "description": "silla ergonomica estilo elegante"
 }, {
     "name": "Monitor", 
     "price": 450, 
     "id": 2, 
     "image": "/products/monitor.jpg",
-    "categoryId": 1
+    "categoryId": 1,
+    "description": "Monitor de alta tecnologia, IPC"
 }, {
     "name": "Micrófono", 
     "price": 20, 
     "id": 3, 
     "image": "/products/microfono.jpg",
-    "categoryId": 2
+    "categoryId": 2,
+    "description": "microfono de alta fidelidad y cancelacion de ruido "
 }, {
     "name": "Parlantes", 
     "price": 56, 
     "id": 4,
     "image": "/products/parlantes.jpg",
-    "categoryId": 1
+    "categoryId": 1,
+    "description": "parlantes de alta potencia, manejo de graves y agudos "
 }, {
     "name": "Audífonos", 
     "price": 450, 
     "id": 5,
     "image": "/products/headphones.jpg",
-    "categoryId": 2
+    "categoryId": 2,
+    "description": "Audifonoas gaming y cancelacion de ruido "
 }, {
     "name": "Mouse Gamer", 
     "price": 20, 
     "id": 6,
     "image": "/products/mouse.jpg",
-    "categoryId": 2
+    "categoryId": 2,
+    "description": "mouse de alta presicion 600 pid "
 }]

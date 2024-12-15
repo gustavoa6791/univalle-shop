@@ -37,6 +37,26 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: () => import('../views/RegisterView.vue')
+    },
+    {
+      path: '/register-successful',
+      name: 'register-successful',
+      component: () => import('../views/RegisterViewOK.vue')
+    },
+    {
+      path: '/purchase',
+      name: 'purchase',
+      component: () => import('../views/PurchaseView.vue')
+    },
+    {
+      path: '/favorites',
+      name: 'favorites',
+      component: () => import('../views/FavoritesView.vue')
+    },
+    {
+      path: '/purchase-succesful',
+      name: 'purchase-succesful',
+      component: () => import('../views/PurchaseViewOK.vue')
     }
   ]
 })

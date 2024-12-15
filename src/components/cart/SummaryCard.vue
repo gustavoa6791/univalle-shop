@@ -1,13 +1,4 @@
-<script lang="ts">
-import { useCartStore } from '@/stores/cart';
-import { mapState } from 'pinia';
 
-export default {
-    computed: {
-        ...mapState(useCartStore, ['totalAmount', 'whatsAppLink'])
-    }
-}
-</script>
 
 <template>
     <v-card>
@@ -18,9 +9,35 @@ export default {
             Total a pagar: ${{ totalAmount }}
         </v-card-subtitle>
         <v-card-text>
-            <v-btn :href="whatsAppLink" target="_blank" variant="tonal" color="orange-lighten-2">
+            <v-btn variant="tonal" color="orange-lighten-2" 
+                  @click="load" 
+                  :loading="loading">
                 Realizar pedido
             </v-btn>
         </v-card-text>
     </v-card>
 </template>
+
+
+<script>
+  import { useHeaderStore } from '@/stores/header';
+
+  
+export default {
+  data: () => ({ loading: false , user: "", pass: ""}),
+
+
+  methods: {
+    load() {
+      this.loading = true
+      setTimeout(() => {
+        this.loading = false
+        const headerStore = useHeaderStore();
+        headerStore.setLogging(true); 
+        headerStore.setUser(this.user); 
+        this.$router.push({ path: '/purchase-succesful' });
+      }, 4000)
+    },
+  },
+}
+</script>
